@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <style>
+        body {
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            background: #1c1c1c;
+        }
+        header.feature-box.top {
+            background-color: #000;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header.feature-box.second {
+            background-color: #3498db;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: -20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .features, .col-sm {
+            background-color: #2c3e50;
+            width: 90%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .new {
+            color: white;
+            margin: 0;
+            padding: 10px;
+            background-color: green;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: -10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width: 768px) {
+            .features, .col-sm {
+                width: 95%;
+            }
+            img {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="feature-box top">
+    <h1><strong>Object Detection using YOLOv8</strong></h1>
+</header>
+<header class="feature-box second">
+    <h1><strong>Output Video</strong></h1>
+</header>
+
+<section class="col-sm">
+    <img src="{{ url_for('webapp') }}" alt="Upload video">
+</section>
+
+</body>
+</html>
